@@ -1,57 +1,26 @@
-import React from "react";
-function Card() {
-  const data = [
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1664201890375-f8fa405cdb7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Amazon",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro repudiandae dolor!",
-        inStock: true,
-    },
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1724249989963-9286e126af81?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Apple",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro repudiandae dolor!",
-        inStock: false,
+import React from 'react';
 
-    },
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1724255863045-2ad716767715?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "mango",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro repudiandae dolor!",
-        inStock: false,
+function create(){
+    const data = [
+        {name:"Raske Qumar",description:"the name of the device that will be used to connect to the server."},
+        {name:"Ashique 2",description:"this verson cal for the device that will be used to connect to the server"},
+        {name:"Darde dil",description:"Another version of the device that will be used to connect to the server"}
+    ]
 
-    },
-  ];
+const Clicked = ()=>{alert("Song Downloaded...")}
 
-  return (
-    <div className="h-screen w-full bg-zinc-500 px-4 py-4 flex items-center justify-center gap-10">
-      {data.map((elem, index) => (
-        <div
-          key={index}
-          className="card w-52 bg-zinc-300  rounded-lg overflow-hidden"
-        >
-          <div className="h-32 w-full bg-zinc-100">
-            <img
-              className="w-full h-full object-cover"
-              src={elem.image}
-              alt=""
-            />
-          </div>
-          <div className="w-full px-3 py-4">
-            <h2 className="font-semibold">{elem.name}</h2>
-            <p className="text-xs mt-3">{elem.description}</p>
-            <button className={`px-2 py-1 mt-2 ${elem.inStock ? "bg-blue-400" : "bg-red-500"} rounded-md text-xm text-zinc-200`}>{elem.inStock ? "in Stock" : "Out of stock"}</button>
-          </div>
+    return (
+        <div  className='Main bg-zinc-400 h-screen w-full flex flex-col items-center justify-center gap-2'>
+          {data.map((elem,index) =>(
+                  <div className='card h-32 w-60 bg-zinc-100 rounded-md px-2 py-2'>
+                  <h2 className='text-2xl font-bold'>{elem.name}</h2>
+                  <p className='text-xs'>{elem.description}</p>
+                  <button onClick={Clicked} className='text-sm px-2 py-1 bg-blue-400 rounded-md mt-2'>Download Now</button>
+                 </div>
+          ))}
+        
         </div>
-      ))}
-    </div>
-  );
+    )
 }
 
-export default Card;
+export default create;
