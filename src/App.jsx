@@ -1,13 +1,16 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
+
 function App(){
-  // useState Intermideate
-  const [score,UpdateScore] = useState(1)
+  // useState Advanced
+  const [val,updateVal] =  useState({name:"Ankit",isBanned:false});
   return(
-    <div className='p-5'>
-      <h1>{score}</h1>
-      <button onClick={()=>UpdateScore((prev)=>prev+1)} className='text-xs text-white mt-2 px-2 py-1 rounded-full bg-blue-500'>update</button>
+    <div className="p-5">
+      <h1>name : {val.name}</h1>
+      <h1>isBanned : {val.isBanned.toString()}</h1>
+      <button onClick={()=>updateVal({...val,isBanned: !val.isBanned})} className="text-xs rounded-full text-white px-2 py-1 bg-blue-400">change</button>
     </div>
   )
 }
-export default App
+
+export default App;
