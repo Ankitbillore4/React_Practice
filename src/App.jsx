@@ -8,7 +8,7 @@ function App(){
     <div className="p-5">
       <h1>name : {val.name}</h1>
       <h1>isBanned : {val.isBanned.toString()}</h1>
-      <button onClick={()=>updateVal({...val,isBanned: !val.isBanned})} className="text-xs rounded-full text-white px-2 py-1 bg-blue-400">change</button>
+      <button onClick={()=>updateVal({...val,isBanned: !val.isBanned , name: "ankit"})} className="text-xs rounded-full text-white px-2 py-1 bg-blue-400">change</button>
     </div>
   )
 }
