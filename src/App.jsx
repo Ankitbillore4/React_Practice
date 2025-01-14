@@ -14,7 +14,7 @@ function App() {
             updateVal({ ...val, isBanned: !val.isBanned, name: "ankit" })
           }
           className={`text-xs rounded-full text-white px-2 py-1 ${
-            val.isBanned ? "bg-blue-500" : "bg-red-500"
+            val.isBanned ? "bg-blue-600" : "bg-red-600"
           }`}
         >
           change
