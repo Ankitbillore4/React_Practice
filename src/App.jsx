@@ -16,7 +16,7 @@ function App() {
           className={`text-xs rounded-full text-white px-2 py-1 ${
             val.isBanned ? "bg-blue-600" : "bg-red-600"
           }`}
-        >
+        >  
           change
         </button>
       </div>
