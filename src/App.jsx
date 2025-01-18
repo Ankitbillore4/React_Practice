@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="h-screen w-full bg-zinc-300 flex flex-col items-center justify-center ">
       <div className="p-2 bg-zinc-100 rounded-lg">
-        <h1>Name : {val.name}</h1>
-        <h1>isBanned : {val.isBanned.toString()}</h1>
+        <h1>Name :{val.name}</h1>
+        <h1>isBanned :{val.isBanned.toString()}</h1>
         <button
           onClick={() =>
             updateVal({ ...val, isBanned: !val.isBanned, name: "Ankit Billore" })
