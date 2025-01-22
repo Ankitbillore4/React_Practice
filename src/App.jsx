@@ -4,7 +4,7 @@ import { useState } from 'react'
 const App = () => {
   const[val,setval] = useState([1,2,3,4,5,6,7,8,9,10])
   return (
-    <div className='p-5'>
+    <div className='p-5 ml-4 bg-red-100'>
       {
         val.map(item=><h1>{item}</h1>)
       }
