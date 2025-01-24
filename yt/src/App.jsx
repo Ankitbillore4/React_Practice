@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const App = () => {
-  const [num, setnum] = useState(0)
+  const handeler = (e)=>{
+e.preventDefault()
+  }
   return (
     <div>
-      <h1>Number is  : {num}</h1>
-      <button onClick={()=>{
-              setnum(num+1)  
-              console.log(num);
-                    
-      }}>Increment</button>
-      <button onClick={()=>{
-        setnum(num-1)
-        console.log(num);
-
-      }}>Decrement</button>
-
+      <form onSubmit={(e)=>{
+        handeler(e)
+        console.log("submited");
+        
+      }}>
+        <label>
+          <input className='bg-yellow-200 outline-none ' type="text" placeholder='enter your name' />
+        </label>
+        <button className='rounded-xl'>Click</button>
+      </form>
     </div>
   )
 }
